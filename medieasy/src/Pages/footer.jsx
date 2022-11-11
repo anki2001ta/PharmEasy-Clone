@@ -83,7 +83,7 @@ function Footer(){
           
           <Stack align={'flex-start'} >
             <Heading as='h4' size='md'>Follow Us</Heading>
-            <SimpleGrid columns={[2, 2, 2, 4]} gap={6}>
+            <SimpleGrid columns={[2, 2, 2, 4]} gap={6} >
                 <Image  boxSize='25px'src={instagram}></Image>
                 <Image  boxSize='25px'src={facebook}></Image>
                 <Image  boxSize='25px'src={youtube}></Image>
