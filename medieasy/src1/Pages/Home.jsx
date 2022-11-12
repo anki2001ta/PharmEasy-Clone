@@ -5,10 +5,9 @@ import Topimg from './images1'
 import Singleslider from './singleslider'
 import Topslide from './Topslide'
 import Trending from './Launch'
-import {Tread,data} from './Tread'
+import Tread from './Tread'
 import Single from './single'
 import Care from './care'
-import Footer from './footer'
 
 const Home = () => {
 
@@ -40,7 +39,6 @@ const Home = () => {
         </Box>
         <Box><Single/></Box>
         <Box><Care/></Box>
-        <Footer/> 
       </Box>
     </div>
   )
