@@ -17,7 +17,6 @@ import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
 
 import Test from './place';
-import { Link } from 'react-router-dom';
 
 
 
@@ -60,8 +59,7 @@ const Nav = () => {
         <Box w='100%' h={"80px"} borderBottom={"1px solid black"} margin={"auto"} pt={"10px"} top={0} zIndex={999} overflow={overflow} position={"sticky"} bg={colorMode == "dark" ? "black" : "white"}>
             <SimpleGrid columns={[3, 3, 3, 6]} >
                 <Center mt={"15px"}>
-                    <Link to="/demo" >
-                    <Img src="https://assets.pharmeasy.in/apothecary/images/logo_big.svg?dim=256x0" w="150px" h={"35px"}></Img></Link>
+                    <Img src="https://assets.pharmeasy.in/apothecary/images/logo_big.svg?dim=256x0" w="150px" h={"35px"}></Img>
                 </Center>
                 <Flex>
                     <Box border={"1px solid gray"} w={"0px"} h={"35px"} mt={"10px"}>

@@ -1,30 +1,31 @@
 import { Box, Flex, Image, SimpleGrid, Text,Center } from "@chakra-ui/react"
 import axios from "axios"
-import React, { useState,useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import "./All.css"
 
-const Topslide = () => {
-    const[head,setHead]=useState([])
+const Care = () => {
+
+    const[stn,seStn]=useState([])
     useEffect(()=>{
-          axios.get("/topslide")
-    .then((res)=>setHead(res.data))
+        axios.get("/stnm")
+        .then((res)=>seStn(res.data))
 
     },[])
-    
-  
+   
 
   return (
     <Box bgGradient={[
         'linear(to-tr, teal.100, yellow.100)',
        
       ]} h={"270px"} color={"black"}>
+         <Text textAlign={"left"} ml={"40px"} fontSize={"25px"} fontWeight= {'bold'}>Shop by Concern</Text>
     <Center>
-    <Box mb={"30px"}mt={"35px"} justifyContent={"center"}  >
+    <Box mb={"30px"}mt={"35px"} justifyContent={"center"} id="care" >
     <Center>
         <SimpleGrid columns={[2,4,6,8]} w={"80%"} m={"auto"} mt={"20px"} gap={10} >
        
            
-           {head.length>0 && head.map(({url,title,disc},index)=>(
+           {stn.length>0 && stn.map(({url,title,disc},index)=>(
                 <SimpleGrid  key={index} columns={1}  w={"186px"} >
                 <Center>
                 <Image src={url} w={"100px"}  ></Image>
@@ -47,4 +48,4 @@ const Topslide = () => {
   )
 }
 
-export default Topslide
+export default Care
