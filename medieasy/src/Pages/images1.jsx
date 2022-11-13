@@ -1,4 +1,4 @@
-import { Box, Flex, Image, SimpleGrid, Text,Center } from "@chakra-ui/react"
+import { Box, Image, SimpleGrid, Text,Center } from "@chakra-ui/react"
 import axios from "axios"
 import React, { useState,useEffect } from 'react'
 import "./All.css"
@@ -10,9 +10,6 @@ const Topimg = () => {
     .then((res)=>setMet(res.data))
 
     },[])
-    
-   
-
   return (
 <>
 <Text textAlign={"left"} ml={"38px"} fontSize={"20px"} fontWeight= {'bold'}>Previously Browsed Items</Text>
@@ -22,8 +19,6 @@ const Topimg = () => {
     <Box ml={"40px"}  >
    
         <SimpleGrid columns={[1,1,2,4]} w={"50%"} gap={10} >
-       
-           
            {mg.length>0 && mg.map(({url,title,strike,price},index)=>(
                 <SimpleGrid  key={index} columns={1}  w={"176px"} gap={9} boxShadow='xl' p='2' rounded='md' bg='gray.100' >
                 <Center>

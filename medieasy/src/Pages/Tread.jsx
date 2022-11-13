@@ -1,4 +1,4 @@
-import { Box, Center, Image, Link, Text } from '@chakra-ui/react';
+import { Box, Center, Image, Text } from '@chakra-ui/react';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import axios from 'axios';
 import React from 'react'
@@ -6,7 +6,7 @@ import { useState, useEffect } from 'react';
 import '@splidejs/react-splide/css/skyblue';
 import '@splidejs/react-splide/css/sea-green';
 import "./All.css"
-import { Navigate, useNavigate } from 'react-router';
+import { useNavigate } from 'react-router';
 
 let data=1
     
@@ -20,7 +20,7 @@ const Tread = () => {
 
 const navigate=useNavigate();
   const handleClick = (id) => {
-    console.log("suhnvsv");
+    // console.log("suhnvsv");
     navigate(`/productt/${id}`)
     data=id;
   }
@@ -36,10 +36,10 @@ const navigate=useNavigate();
         {
           trd.length > 0 && trd.map(({ url, title, strike, price }, index) => (
             <SplideSlide key={index} >
-                <Box  id='trending' h={"300px"} boxShadow='xl' p='6' rounded='md' bg='white'>
+                <Box  id='trending' h={"300px"} boxShadow='xl' p='6' rounded='md' bg='white' border={"1px solid grey"}>
                   <Center onClick={()=>{handleClick(index)}}>
 
-                    <Image w={"100px"} src={url} h={"140px"} alt="Image 1" borderRadius={"15px"} />
+                    <Image w={"100px"} h={"140px"} src={url}  alt="Image 1" borderRadius={"15px"} />
 
                   </Center>
                   <Center>

@@ -1,4 +1,4 @@
-import { Box, Flex, SimpleGrid, useColorModeValue, Stack, Link, Tag, Heading,Image,Text } from "@chakra-ui/react"
+import { Box, Flex, SimpleGrid, useColorModeValue, Stack, Link, Heading,Image,Text } from "@chakra-ui/react"
 import { Container } from "@chakra-ui/react"
 import instagram from "../instagram.png"
 import facebook from "../facebook.png"

@@ -27,12 +27,15 @@ const Categry = () => {
     
     {
    cate.length>0 && cate.map(({url,title},index)=>(
+   
     <SplideSlide key={index}>
-    <Box border={"1px solid gray"}  bgColor={"white"}>
+    <Box border={"1px solid grey"}  bgColor={"white"}>
     <Image w={"100%"}src={url} alt="Image" h={"150px"} borderRadius={"15px"}/>
     </Box>
     <Text>{title}</Text>
-  </SplideSlide>
+   
+  </SplideSlide >
+  
    ))
 }
 </Splide>
@@ -41,3 +44,4 @@ const Categry = () => {
 }
 
 export default Categry
+//shop by categories

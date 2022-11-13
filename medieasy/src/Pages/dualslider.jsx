@@ -36,3 +36,4 @@ const Dualslider = () => {
 }
 
 export default Dualslider
+// poster image slider top
