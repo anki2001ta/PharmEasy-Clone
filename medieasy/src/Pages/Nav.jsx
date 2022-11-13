@@ -9,6 +9,7 @@ import {
     DrawerContent,
     DrawerCloseButton,
 } from '@chakra-ui/react'
+import { useToast } from '@chakra-ui/react'
 import React, { useState, useEffect } from 'react';
 import BoltIcon from '@mui/icons-material/Bolt';
 import { SunIcon, ChevronDownIcon, SearchIcon, MoonIcon } from '@chakra-ui/icons'
@@ -23,13 +24,27 @@ import { Link } from 'react-router-dom';
 
 
 const Nav = () => {
+    const toast = useToast()
+    function handlenum(){
+        let vr=Math.floor(Math.random()*9999)+1000;
+       
+          console.log(vr)
+          toast({
+            title: 'Account created.',
+            description: "We've created your account for you.",
+            status: 'success',
+            duration: 9000,
+            isClosable: true,
 
+          })
+          onClose()
+        }
 
 
     // inside component:
     const { isOpen, onOpen, onClose } = useDisclosure()
     const btnRef = React.useRef()
-
+    const [userNumber, setuserNumber] = useState("");
     const [scrollPosition, setScrollPosition] = useState(0);
     const [overflow, setOverflow] = useState("hidden")
 
@@ -53,14 +68,19 @@ const Nav = () => {
     }, [scrollPosition])
 
     const { colorMode, toggleColorMode } = useColorMode()
-
+ function handleChange(e){
+    if(e.target.value.length===10){ 
+        window.alert("Usernumber shouldn't exceed 10 characters")
+      }
+      setuserNumber(e.target.value);
+ }
 
     //
     return (
         <Box w='100%' h={"80px"} borderBottom={"1px solid black"} margin={"auto"} pt={"10px"} top={0} zIndex={999} overflow={overflow} position={"sticky"} bg={colorMode == "dark" ? "black" : "white"}>
             <SimpleGrid columns={[3, 3, 3, 6]} >
                 <Center mt={"15px"}>
-                    <Link to="/demo" >
+                    <Link to="/" >
                     <Img src="https://assets.pharmeasy.in/apothecary/images/logo_big.svg?dim=256x0" w="150px" h={"35px"}></Img></Link>
                 </Center>
                 <Flex>
@@ -127,9 +147,20 @@ const Nav = () => {
 
                                     <DrawerBody >
                                         <Box mt={"20px"}>
-                                        <Input type={"number"}placeholder='Type here...' />
+                                        <Input placeholder='Type Your Mobile number'
+                                         type="number"
+                                         name="usernumber"
+                                         value={userNumber}
+                                         onChange={ handleChange}
+                                        
+                                        />
                                         <Center>
-                                        <Button bg={"teal.400"} color={"white.400"}w={"98%"} mt={"15px"}>Send OTP</Button>
+                                        <Button  onClick={handlenum} bg={"teal.400"} color={"white.400"}w={"98%"} mt={"15px"}>Send OTP</Button>
+                                        </Center>
+                                        <Center>
+                                            <Link to="/admin">
+                                        <Button   bg={"red.400"} color={"white.400"}w={"98%"} mt={"15px"}>Login AS Admin</Button>
+                                        </Link>
                                         </Center>
                                         </Box>
                                     </DrawerBody>
@@ -161,10 +192,11 @@ const Nav = () => {
                         <Flex >
                             <Center>
                                 < ShoppingCartOutlinedIcon fontSize="medium" />
+                                
                             </Center>
                             <Center>
-                                <Text fontSize="16px" color={"black.600"}>
-                                    Cart
+                                <Text  color={"black.600"}>
+                                  <Link to="/cart">Cart</Link>
                                 </Text>
                             </Center>
                         </Flex>

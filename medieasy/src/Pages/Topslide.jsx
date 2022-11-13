@@ -1,4 +1,4 @@
-import { Box, Flex, Image, SimpleGrid, Text,Center } from "@chakra-ui/react"
+import { Box, Image, SimpleGrid, Text,Center } from "@chakra-ui/react"
 import axios from "axios"
 import React, { useState,useEffect } from 'react'
 import "./All.css"

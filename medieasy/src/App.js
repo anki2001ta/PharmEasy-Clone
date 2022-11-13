@@ -6,10 +6,13 @@ import Nav from './Pages/Nav';
 
 import AllRoutes from './Component/AllRoutes';
 import Productt from './Pages/Productt';
+import { useState } from 'react';
 
 function App() {
+  
+  
   return (
-    <div className="App" style={{height:"2000px"}}>
+    <div className="App" >
       <Nav/>
       {/* <Productt/> */}
       
@@ -18,6 +21,7 @@ function App() {
     
 
       <AllRoutes/>
+      
       
     </div>
   );

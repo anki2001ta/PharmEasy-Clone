@@ -9,6 +9,11 @@ import {Tread,data} from './Tread'
 import Single from './single'
 import Care from './care'
 import Footer from './footer'
+import Pici from './pic'
+import Health from './health'
+import Written from './written'
+
+
 
 const Home = () => {
 
@@ -38,8 +43,17 @@ const Home = () => {
         <Box>
         <Tread/>
         </Box>
-        <Box><Single/></Box>
-        <Box><Care/></Box>
+        <Box><Single/>
+        </Box>
+        <Box><Care/>
+        </Box>
+        <Box>< Pici/>
+        </Box>
+        <Box>< Health/>
+        </Box>
+        <Box>< Written/>
+        </Box>
+       
         <Footer/> 
       </Box>
     </div>

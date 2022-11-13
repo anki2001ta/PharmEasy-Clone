@@ -7,35 +7,32 @@ import '@splidejs/react-splide/css/skyblue';
 import '@splidejs/react-splide/css/sea-green';
 import "./All.css"
 
-const Trending = () => {
-    const[trend,setTrending]=useState([])
+const Pici = () => {
+    const[pici,setPici]=useState([])
     useEffect(()=>{
-        
-    axios.get("/laucnh")
-    .then((res)=>setTrending(res.data))
-    },[])
-   
+         axios.get("/pict")
+    .then((res)=>setPici(res.data))
 
-    
+    },[])
   return (
     <div >
-    <Text textAlign={"left"} ml={"40px"} fontSize={"25px"} fontWeight= {'bold'}>New Launches</Text>
+        <div >
+    <Text textAlign={"left"} ml={"40px"} fontSize={"25px"} fontWeight= {'bold'} mt={"35px"}>Featured Brands</Text>
     
      <Splide aria-label="My Favorite Images"  options={{
-        perPage: 6,
-        height: '370px',
+        perPage: 7,
+        height: '250px',
         rewind: true,
-        gap: '25px',
+        gap: '20px',
       }}>
     {
-   trend.length>0 && trend.map(({url,title,strike,price},index)=>(
-    <SplideSlide key={index}>
-        <Box id='trending' h={"300px"} boxShadow='xl' p='6' rounded='md' bg='white ' border={"1px solid grey"}>
+   pici.length>0 && pici.map(({url,title,strike,price},index)=>(
+    <SplideSlide key={index} >
+        <Box id='trending' h={"300px"}>
     <Center>
     <Link to={"/Productt"}>
-    <Image w={"90px"}src={url} h={"130px"} alt="Image 1"borderRadius={"15px"}  />
+    <Image w={"200px"}src={url} h={"170pxpx"} alt="Image 1"borderRadius={"15px"}  />
     </Link>
-   
     </Center>
     <Center>
     <Text mt={"15px"}>{title}</Text>
@@ -49,9 +46,9 @@ const Trending = () => {
    ))
 }
 </Splide>
-
-    </div>
+</div>
+ </div>
   )
 }
 
-export default Trending
+export default Pici

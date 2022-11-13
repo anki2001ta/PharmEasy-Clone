@@ -1,5 +1,5 @@
 import React from "react"
-import {Input, useColorMode} from "@chakra-ui/react"
+import {Input} from "@chakra-ui/react"
 const {useState, useEffect} = React;
 
 const placeholderText = ["Medicine", "Shampoo", "Health Drink"];
@@ -22,12 +22,12 @@ const Test = () => {
     //when the component unmounts
     return () => { clearInterval(timer); }
   }, []);
-  const {colorMode}=useColorMode()
+  // const {colorMode}=useColorMode()
 
   
   
   return (
-    <Input  style={{textIndent:"25px"}}type='Search' placeholder={"Search For"+" "+placeholderText[index]}  w={"600px"} position={"relative"} pr={"160px"}/>
+    <Input  style={{textIndent:"25px"}}type='Search' placeholder={`Search For ${placeholderText[index]}`}  w={"600px"} position={"relative"} pr={"160px"}/>
   )
 }
 export default Test
