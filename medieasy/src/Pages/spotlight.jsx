@@ -10,11 +10,11 @@ import { useNavigate } from 'react-router';
 
 let data=1
     
-const Tread = () => {
-  const [trd, setTrd] = useState([])
+const Spotlight = () => {
+  const [spot, setSpot] = useState([])
   useEffect(() => {
-    axios.get("https://harmless-towering-cardboard.glitch.me/Trending")
-      .then((res) => setTrd(res.data))
+    axios.get("https://harmless-towering-cardboard.glitch.me/Spotlight")
+      .then((res) => setSpot(res.data))
 
   }, [])
 
@@ -26,7 +26,7 @@ const navigate=useNavigate();
   }
   return (
     <div >
-      <Text textAlign={"left"} ml={"40px"} fontSize={"25px"} fontWeight={'bold'}>New Trendings</Text>
+      <Text textAlign={"left"} ml={"40px"} fontSize={"25px"} fontWeight={'bold'}>Spotlight</Text>
       <Splide aria-label="My Favorite Images" options={{
         perPage: 6,
         height: '370px',
@@ -34,7 +34,7 @@ const navigate=useNavigate();
         gap: '25px',
       }}>
         {
-          trd.length > 0 && trd.map(({ url, title, strike, price }, index) => (
+          spot.length > 0 && spot.map(({ url, title, strike, price }, index) => (
             <SplideSlide key={index} >
                 <Box  id='trending' h={"300px"} boxShadow='xl' p='6' rounded='md' bg='white' border={"1px solid grey"}>
                   <Center onClick={()=>{handleClick(index)}}>
@@ -60,4 +60,4 @@ const navigate=useNavigate();
   )
 }
 
-export  {Tread,data}
+export  {Spotlight,data}

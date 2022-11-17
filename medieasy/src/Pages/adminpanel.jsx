@@ -10,7 +10,7 @@ const Adminpanel = () => {
     const toast = useToast()
   const statuses = ['success', 'error']
     const deleteFromServer=(id)=>{
-        axios.delete(`/test/${id}`)
+        axios.delete(`https://harmless-towering-cardboard.glitch.me/Previous/${id}`)
         .then(()=>{
             toast({
                 title: `Sucessfully Deleted`,
@@ -34,7 +34,7 @@ const Adminpanel = () => {
             title:title.current.value,
             price:price.current.value
         }
-        axios.post('/test',product)
+        axios.post('https://harmless-towering-cardboard.glitch.me/Previous',product)
         .then(()=>{
             toast({
                 title: `Sucessfully Added`,
@@ -57,8 +57,8 @@ const Adminpanel = () => {
                 <SimpleGrid columns={1} gap={"10px"} w={"500px"} mt={"40px"}>
                 <Input ref={id} type="text" placeholder='Enter Product ID here....' />
                     <Input ref={title} type="text" placeholder='Enter Product Name here....' />
-                    <Input ref={image} type="text" placeholder='Enter Image URL here...' />
-                    <Input ref={price} type="text" placeholder='Enter Price here...' />
+                    <Input ref={image} type="url" placeholder='Enter Image URL here...' />
+                    <Input ref={price} type="number" placeholder='Enter Price here...' />
                     <SimpleGrid columns={[1,1,2,2]}>
                     <Button onClick={addToServer} color={"white"} bg={"teal.600"}> ADD</Button>
                     <Button onClick={()=>deleteFromServer(id.current.value)} color={"white"} bg={"pink.600"}> DELETE</Button>

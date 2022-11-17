@@ -10,7 +10,7 @@ import "./All.css"
 const Dualslider = () => {
     const[heading,setHeading]=useState([])
     useEffect(()=>{
-        axios.get("/doubleslide")
+        axios.get("https://harmless-towering-cardboard.glitch.me/doubleslide")
     .then((res)=>setHeading(res.data))
 
     },[])

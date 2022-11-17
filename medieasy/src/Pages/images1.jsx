@@ -6,7 +6,7 @@ import "./All.css"
 const Topimg = () => {
     const[mg,setMet]=useState([])
     useEffect(()=>{
-         axios.get("/Previous")
+         axios.get("https://harmless-towering-cardboard.glitch.me/Previous")
     .then((res)=>setMet(res.data))
 
     },[])
@@ -16,9 +16,9 @@ const Topimg = () => {
     <Box mt={"20px"} h={"300px"} color={"black"} >
   
 
-    <Box ml={"40px"}  >
+    <Box ml={"40px"} >
    
-        <SimpleGrid columns={[1,1,2,4]} w={"50%"} gap={10} >
+        <SimpleGrid columns={[1,2,4,6]} w={"90%"} gap={10} >
            {mg.length>0 && mg.map(({url,title,strike,price},index)=>(
                 <SimpleGrid  key={index} columns={1}  w={"176px"} gap={9} boxShadow='xl' p='2' rounded='md' bg='gray.100' >
                 <Center>
@@ -29,9 +29,9 @@ const Topimg = () => {
                 
                 <Text  fontSize={"15px"} _hover={{ fontWeight: 'semibold' }} >{title}</Text>
                
-               <strike><Text mt={"-40px"}fontSize={"15px"}color={"red.600"}>MRP{strike}</Text></strike>
+               <strike><Text mt={"-40px"}fontSize={"15px"}color={"red.600"}>MRP {strike}</Text></strike>
                
-                <Text mt={"-50px"} fontSize={"15px"} >{price}</Text>
+                <Text mt={"-50px"} fontSize={"15px"} >MRP {price}</Text>
                
                 </SimpleGrid >
             ))

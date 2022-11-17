@@ -12,6 +12,7 @@ import Footer from './footer'
 import Pici from './pic'
 import Health from './health'
 import Written from './written'
+import { Spotlight } from './spotlight'
 
 
 
@@ -49,6 +50,9 @@ const Home = () => {
         </Box>
         <Box>< Pici/>
         </Box>
+        <Box><Spotlight/>
+        </Box>
+      
         <Box>< Health/>
         </Box>
         <Box>< Written/>
