@@ -38,7 +38,7 @@ const Trending = () => {
    
     </Center>
     <Center>
-    <Text mt={"15px"}>{title}</Text>
+    <Text mt={"16px"}>{title}</Text>
     </Center>
     <Center>
    <strike> <Text>{strike}</Text></strike>

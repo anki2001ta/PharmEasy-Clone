@@ -17,7 +17,7 @@ const Pici = () => {
   return (
     <div >
         <div >
-    <Text textAlign={"left"} ml={"40px"} fontSize={"25px"} fontWeight= {'bold'} mt={"35px"}>Featured Brands</Text>
+    <Text textAlign={"left"} ml={"41px"} fontSize={"25px"} fontWeight= {'bold'} mt={"35px"}>Featured Brands</Text>
     
      <Splide aria-label="My Favorite Images"  options={{
         perPage: 7,
