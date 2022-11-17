@@ -10,7 +10,7 @@ import "./All.css"
 const Categry = () => {
     const[cate,setCate]=useState([])
     useEffect(()=>{
-        axios.get("/category")
+        axios.get("https://harmless-towering-cardboard.glitch.me/category")
     .then((res)=>setCate(res.data))
 
     },[])

@@ -10,7 +10,7 @@ import "./All.css"
 const Singleslider = () => {
     const[single,setSingle]=useState([])
     useEffect(()=>{
-         axios.get("/singleimg")
+         axios.get("https://harmless-towering-cardboard.glitch.me/singleimg")
     .then((res)=>setSingle(res.data))
 
     },[])

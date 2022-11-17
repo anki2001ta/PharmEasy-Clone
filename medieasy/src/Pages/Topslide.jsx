@@ -6,7 +6,7 @@ import "./All.css"
 const Topslide = () => {
     const[head,setHead]=useState([])
     useEffect(()=>{
-          axios.get("/topslide")
+          axios.get("https://harmless-towering-cardboard.glitch.me/topslide")
     .then((res)=>setHead(res.data))
 
     },[])

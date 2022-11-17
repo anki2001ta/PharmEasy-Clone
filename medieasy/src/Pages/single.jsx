@@ -10,7 +10,7 @@ import "./All.css"
 const Single = () => {
     const[single,setSingle]=useState([])
     useEffect(()=>{
-         axios.get("/single")
+         axios.get("https://harmless-towering-cardboard.glitch.me/single")
     .then((res)=>setSingle(res.data))
 
     },[])

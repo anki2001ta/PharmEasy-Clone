@@ -32,7 +32,7 @@ const Trending = () => {
     <SplideSlide key={index}>
         <Box id='trending' h={"300px"} boxShadow='xl' p='6' rounded='md' bg='white ' border={"1px solid grey"}>
     <Center>
-    <Link to={"/Productt"}>
+    <Link to={"https://harmless-towering-cardboard.glitch.me/Productt"}>
     <Image w={"90px"}src={url} h={"130px"} alt="Image 1"borderRadius={"15px"}  />
     </Link>
    

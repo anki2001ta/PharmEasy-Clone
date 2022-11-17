@@ -20,7 +20,8 @@ const AllRoutes = () => {
             <Cart/> )}/>
           <Route path="/admin" element={<Admin/>}/>
           <Route path="/adminPanel" element={<Adminpanel/>}/>
-          <Route path="/CHECKOUT" element={<Checkout/>}/>
+          <Route path="/Sucess" element={<Checkout/>}/>
+         
       </Routes>
     </div>
   )

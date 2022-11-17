@@ -10,7 +10,7 @@ import "./All.css"
 const Pici = () => {
     const[pici,setPici]=useState([])
     useEffect(()=>{
-         axios.get("/pict")
+         axios.get("https://harmless-towering-cardboard.glitch.me/pict")
     .then((res)=>setPici(res.data))
 
     },[])

@@ -21,7 +21,7 @@ const handleclick=()=>{
 
   let id = data;
   console.log(id)
-  let base_url = `/Trending?id=${id}`
+  let base_url = `https://harmless-towering-cardboard.glitch.me/Trending?id=${id}`
   
  const [data1, setTrd] = useState([])
  let [count,setCount]=useState(cart.length)

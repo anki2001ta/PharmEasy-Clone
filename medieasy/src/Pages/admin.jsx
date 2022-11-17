@@ -27,7 +27,7 @@ function handleAuth(){
  }
 }
 useEffect(()=>{
-    axios.get("/admin")
+    axios.get("https://harmless-towering-cardboard.glitch.me/admin")
     .then((res)=>setAdmin(res.data))
 },[])
 

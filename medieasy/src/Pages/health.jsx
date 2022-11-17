@@ -10,7 +10,7 @@ import "./All.css"
 const Health = () => {
     const[health,setHealth]=useState([])
     useEffect(()=>{
-         axios.get("/Health")
+         axios.get("https://harmless-towering-cardboard.glitch.me/Health")
     .then((res)=>setHealth(res.data))
 
     },[])

@@ -8,7 +8,7 @@ const Care = () => {
     const[stn,seStn]=useState([])
    
     useEffect(()=>{
-        axios.get("/stnm")
+        axios.get("https://harmless-towering-cardboard.glitch.me/stnm")
         .then((res)=>seStn(res.data))
 
     },[])
