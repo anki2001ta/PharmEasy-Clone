@@ -1,5 +1,5 @@
 # PHARMAEASY CLONE (Individual project)
-https://630c7ea5fe01ec7d8a7acb5f--aquamarine-khapse-1fb54c.netlify.app/
+Deployed Link:https://glittering-cat-4a0e89.netlify.app/
 
 Description:- 
 Pharmaeasy is a website selling wellness products in the United States of America. It was a group project. Our task was to clone the website.</br>
